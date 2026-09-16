@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { Product, CartItem, MemeItem, Order, ProductCategory, UserProfile } from './types';
 import { Header } from './components/Header';
-import { MobileBottomNav } from './components/MobileBottomNav';
+import { MobileBottomNav } from './MobileBottomNav';
 import { ProductCard } from './components/ProductCard';
 import { ProductModal } from './components/ProductModal';
 import { CartDrawer } from './components/CartDrawer';
