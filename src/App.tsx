@@ -1,20 +1,20 @@
 import React, { useState, useEffect } from 'react';
 import { Product, CartItem, MemeItem, Order, ProductCategory, UserProfile } from './types';
-import { Header } from './components/Header';
+import { Header } from './Header';
 import { MobileBottomNav } from './MobileBottomNav';
-import { ProductCard } from './components/ProductCard';
-import { ProductModal } from './components/ProductModal';
-import { CartDrawer } from './components/CartDrawer';
-import { CheckoutModal } from './components/CheckoutModal';
-import { OrderSuccessModal } from './components/OrderSuccessModal';
-import { CustomBiscuitStudio } from './components/CustomBiscuitStudio';
-import { VibeMoodMatcher } from './components/VibeMoodMatcher';
-import { MemeFeed } from './components/MemeFeed';
-import { OrderTracker } from './components/OrderTracker';
-import { AdminDashboard } from './components/AdminDashboard';
-import { GuestProfileModal } from './components/GuestProfileModal';
-import { SecretBakerTrigger } from './components/SecretBakerTrigger';
-import { Footer } from './components/Footer';
+import { ProductCard } from './ProductCard';
+import { ProductModal } from './ProductModal';
+import { CartDrawer } from './CartDrawer';
+import { CheckoutModal } from './CheckoutModal';
+import { OrderSuccessModal } from './OrderSuccessModal';
+import { CustomBiscuitStudio } from './CustomBiscuitStudio';
+import { VibeMoodMatcher } from './VibeMoodMatcher';
+import { MemeFeed } from './MemeFeed';
+import { OrderTracker } from './OrderTracker';
+import { AdminDashboard } from './AdminDashboard';
+import { GuestProfileModal } from './GuestProfileModal';
+import { SecretBakerTrigger } from './SecretBakerTrigger';
+import { Footer } from './Footer';
 import { Sparkles, Cookie, Flame, Filter, Heart, ArrowRight, Truck, Gift, ShieldAlert } from 'lucide-react';
 import { formatZAR } from './utils/format';
 
@@ -140,7 +140,6 @@ export default function App() {
     boxRibbon?: 'hot-pink' | 'lavender' | 'leopard'
   ) => {
     setCartItems(prev => {
-      // If product has custom message or ribbon, treat as unique item
       if (customMessage || boxRibbon) {
         return [...prev, { product, quantity, customMessage, boxRibbon }];
       }
@@ -270,7 +269,6 @@ export default function App() {
           <div className="space-y-8 animate-in fade-in duration-300">
             {/* Playful Hero Banner */}
             <div className="relative rounded-3xl bg-gradient-to-r from-pink-500 via-rose-400 to-pink-500 p-6 sm:p-10 text-white shadow-xl overflow-hidden">
-              {/* Background decorative doodles */}
               <div className="absolute top-0 right-0 -mt-8 -mr-8 w-48 h-48 bg-white/10 rounded-full blur-2xl pointer-events-none" />
               <div className="absolute bottom-0 left-1/3 -mb-10 w-64 h-64 bg-pink-600/30 rounded-full blur-3xl pointer-events-none" />
 
@@ -548,7 +546,7 @@ export default function App() {
         />
       )}
 
-      {/* Discreet Secret Baker Trigger (Little Cookie in Corner) */}
+      {/* Discreet Secret Baker Trigger */}
       <SecretBakerTrigger onOpenAdmin={() => setIsAdminOpen(true)} />
 
       {/* Mobile Bottom Navigation Bar */}
